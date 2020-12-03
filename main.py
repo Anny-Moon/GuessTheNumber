@@ -8,3 +8,5 @@ gameplay = Gameplay.Gameplay();
 master.setGameplay(gameplay);
 
 master.onStart();
+
+print("This line will be printed.")
