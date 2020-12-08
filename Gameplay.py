@@ -1,10 +1,17 @@
+import random
+
 class Gameplay():
     def __init__(self):
         self.minValue = 0
         self.maxValue = None
+        self.number = 0
     
     def setMaxValue(self, maxValue_in):
-        self.maxValue = None
+        self.maxValue = maxValue_in
+        self.generateTheNumber()
+    
+    def generateTheNumber(self):
+        self.number = random.randint(self.minValue, self.maxValue);
     
     def start(self):
         while(1):
@@ -13,5 +20,5 @@ class Gameplay():
         
     def onNewGuess(self):
         guess = input()
-        print("Teach me to how to answer")
+        print("Teach me how to answer (my number is %i)."%self.number)
         print("----------------")
